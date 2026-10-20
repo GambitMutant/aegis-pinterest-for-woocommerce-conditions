@@ -8,7 +8,7 @@ Add-on for [Pinterest for WooCommerce](https://wordpress.org/plugins/pinterest-f
 
 Author: [Gambit Mutant](https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions)
 
-Version 1.3.0 · GPL-2.0-or-later
+Version 1.3.1 · GPL-2.0-or-later
 
 ## Donations
 
@@ -22,13 +22,12 @@ Donations support **The AEGIS Alliance's project funding**. A secondary purpose 
 | Venmo | username `aegisalliance` |
 | Zelle | username `aegisalliance` |
 | Cash App | `$aegisalliance` |
+| Crypto accepted at Coinbase | |
 | USDC | `0x39C7e115C4184f2E646D44E3681A87a22a93341B` |
+| BTC | `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1` |
 | ETH | `0xcD8B620962e9ff4a098c4134f1C82fDf96236F87` |
+| DOGE | `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB` |
 | USDT | `0x4aF2eE05A313c8a8dd53EdA87DDA69F3E375c3B5` |
-| BTC | `0x876dA7d647C37FB7A8E94Fa287FefeB192dd49fc` |
-| DOGE | `0x94ef8226B0409f382CAb78D2695FD3d7384f6bd6` |
-
-BTC and DOGE are published in the `0x` form supplied by The AEGIS Alliance. Confirm the network in your wallet before you send. Do not send a native Bitcoin transaction (addresses that start with `1`, `3`, or `bc1`) or a native Dogecoin transaction (addresses that start with `D`) to an `0x` address.
 
 ## Requirements
 
@@ -114,6 +113,10 @@ No phone-home, no tracking pixels, and no catalog data leaves the site because o
 See [SECURITY.md](SECURITY.md). Report a vulnerability to [gambit@theaegisalliance.com](mailto:gambit@theaegisalliance.com).
 
 ## Changelog
+
+### 1.3.1
+
+- Updated the Coinbase donation addresses. Bitcoin is `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1`. Dogecoin is `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB`.
 
 ### 1.3.0
 

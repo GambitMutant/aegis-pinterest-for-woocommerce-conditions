@@ -6,7 +6,7 @@ Requires at least: 6.2
 Tested up to: 7.1.3
 Requires PHP: 7.4
 Requires Plugins: woocommerce, pinterest-for-woocommerce
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 WC requires at least: 7.1
@@ -30,13 +30,12 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose of d
 * [AEGIS Shop](https://shop.theaegisalliance.com)
 * PayPal, Venmo, and Zelle username: `aegisalliance`
 * Cash App: `$aegisalliance`
+* Crypto accepted at Coinbase:
 * USDC: `0x39C7e115C4184f2E646D44E3681A87a22a93341B`
+* BTC: `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1`
 * ETH: `0xcD8B620962e9ff4a098c4134f1C82fDf96236F87`
+* DOGE: `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB`
 * USDT: `0x4aF2eE05A313c8a8dd53EdA87DDA69F3E375c3B5`
-* BTC (address as provided): `0x876dA7d647C37FB7A8E94Fa287FefeB192dd49fc`
-* DOGE (address as provided): `0x94ef8226B0409f382CAb78D2695FD3d7384f6bd6`
-
-BTC and DOGE are listed in the 0x form supplied by The AEGIS Alliance. Confirm the network in your wallet before sending. Do not send a native Bitcoin transaction (addresses starting with 1, 3, or bc1) or a native Dogecoin transaction (addresses starting with D) to an 0x address.
 
 = How it works =
 
@@ -129,6 +128,10 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 
 == Changelog ==
 
+= 1.3.1 =
+
+* Updated the Coinbase donation addresses. Bitcoin is `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1`. Dogecoin is `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB`.
+
 = 1.3.0 =
 
 * Renamed the plugin to AEGIS Pinterest for WooCommerce Conditions.
@@ -148,6 +151,9 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 * Earlier release, published as WooCommerce Pinterest Condition Bulk Updater by The AEGIS Alliance.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Donation address update only. Bitcoin and Dogecoin now use the Coinbase addresses in the readme. No change to how conditions are saved.
 
 = 1.3.0 =
 Rebrand, documentation, and compatibility update for WordPress 7.1.3, WooCommerce 11.2, Pinterest for WooCommerce 1.5.4, and PHP 7.4 through 8.5. Deactivate the old "WooCommerce Pinterest Condition Bulk Updater" plugin if it is still installed. Existing condition meta is left as it is.

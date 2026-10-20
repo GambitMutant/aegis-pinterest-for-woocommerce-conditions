@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       AEGIS Pinterest for WooCommerce Conditions
  * Plugin URI:        https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
- * Description:       Sets the Pinterest condition (New, Used, or Refurbished) for a product, or for every variation at once. Add-on for Pinterest for WooCommerce. Donations support The AEGIS Alliance's project funding, with a secondary purpose of business operations funding.
- * Version:           1.3.0
+ * Description:       Sets the Pinterest condition (New, Used, or Refurbished) for a product, or for every variation at once. Add-on for Pinterest for WooCommerce. Donations support The AEGIS Alliance's project funding, with a secondary purpose of business operations funding. Crypto accepted at Coinbase: USDC 0x39C7e115C4184f2E646D44E3681A87a22a93341B, BTC 3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1, ETH 0xcD8B620962e9ff4a098c4134f1C82fDf96236F87, DOGE DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB, USDT 0x4aF2eE05A313c8a8dd53EdA87DDA69F3E375c3B5.
+ * Version:           1.3.1
  * Author:            Gambit Mutant
  * Author URI:        https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
  * License:           GPL-2.0-or-later
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'AEGIS_PINTEREST_WC_CONDITIONS_VERSION', '1.3.0' );
+define( 'AEGIS_PINTEREST_WC_CONDITIONS_VERSION', '1.3.1' );
 define( 'AEGIS_PINTEREST_WC_CONDITIONS_FILE', __FILE__ );
 
 /**
