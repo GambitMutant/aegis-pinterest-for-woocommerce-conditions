@@ -6,15 +6,19 @@ Requires at least: 6.2
 Tested up to: 7.1.3
 Requires PHP: 7.4
 Requires Plugins: woocommerce, pinterest-for-woocommerce
-Stable tag: 1.3.1
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.3.2
+License: Source-available. See TERMS.md in the repository.
+License URI: https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions/blob/main/TERMS.md
 WC requires at least: 7.1
 WC tested up to: 11.2
 
 Set a product's Pinterest condition, or apply one condition to every variation, from the product editor.
 
 == Description ==
+
+The AEGIS Alliance is the original author. Original repository: https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
+
+Forks, copies, and reuse must credit The AEGIS Alliance, link to that repository, and keep the donation information below intact. See TERMS.md. This release is source-available. Earlier releases remain under GPL-2.0-or-later.
 
 AEGIS Pinterest for WooCommerce Conditions is an add-on for the official Pinterest for WooCommerce plugin. It adds one control to the classic product editor so you can set the catalog condition Pinterest expects: New, Used, or Refurbished.
 
@@ -128,6 +132,11 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 
 == Changelog ==
 
+= 1.3.2 =
+
+* Added TERMS.md. Forks must credit The AEGIS Alliance, link to the original repository, and keep donation information intact.
+* This release is source-available. Earlier releases remain under the GPL.
+
 = 1.3.1 =
 
 * Updated the Coinbase donation addresses. Bitcoin is `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1`. Dogecoin is `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB`.
@@ -151,6 +160,9 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 * Earlier release, published as WooCommerce Pinterest Condition Bulk Updater by The AEGIS Alliance.
 
 == Upgrade Notice ==
+
+= 1.3.2 =
+Adds the repository terms. Donation addresses are unchanged. Existing condition meta is left as it is.
 
 = 1.3.1 =
 Donation address update only. Bitcoin and Dogecoin now use the Coinbase addresses in the readme. No change to how conditions are saved.

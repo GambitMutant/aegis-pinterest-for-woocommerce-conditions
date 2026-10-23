@@ -1,5 +1,14 @@
 # AEGIS Pinterest for WooCommerce Conditions
 
+## Credit and terms
+
+**The AEGIS Alliance** is the original author, creator, and developer of this repository.
+
+- Original repository: https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
+- Forks, copies, derivative works, and any other reuse must credit **The AEGIS Alliance**, link to that original repository in the README and the repository description, and keep the donation and fee information in this repository intact and unmodified.
+- Where a fee is collected, including the disclosed cryptocurrency fee, the destination of that fee must not be changed, and the keys or addresses that send it must not be modified or decrypted.
+- Use is subject to [TERMS.md](TERMS.md). This project is **source-available**, not open source under the Open Source Initiative definition. Unauthorized use that violates those terms is not allowed.
+
 Add-on for [Pinterest for WooCommerce](https://wordpress.org/plugins/pinterest-for-woocommerce/) that sets a product's Pinterest condition from the classic product editor.
 
 - **Simple products:** set New, Used, or Refurbished on that product.
@@ -8,7 +17,7 @@ Add-on for [Pinterest for WooCommerce](https://wordpress.org/plugins/pinterest-f
 
 Author: [Gambit Mutant](https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions)
 
-Version 1.3.1 · GPL-2.0-or-later
+Version 1.3.2 · source-available under [TERMS.md](TERMS.md). Earlier releases stay under GPL-2.0-or-later.
 
 ## Donations
 
@@ -114,6 +123,11 @@ See [SECURITY.md](SECURITY.md). Report a vulnerability to [gambit@theaegisallian
 
 ## Changelog
 
+### 1.3.2
+
+- Added TERMS.md. Forks must credit The AEGIS Alliance, link to the original repository, and keep the donation information intact.
+- This release is source-available. Earlier releases remain under GPL-2.0-or-later.
+
 ### 1.3.1
 
 - Updated the Coinbase donation addresses. Bitcoin is `3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1`. Dogecoin is `DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB`.
@@ -137,4 +151,4 @@ Earlier release, distributed as WooCommerce Pinterest Condition Bulk Updater by 
 
 ## License
 
-[GPL-2.0-or-later](LICENSE). Copyright 2025–2026 Gambit Mutant and The AEGIS Alliance.
+Source-available under [TERMS.md](TERMS.md), starting with version 1.3.2. The GPL text in [LICENSE](LICENSE) covers earlier releases. Copyright 2025–2026 Gambit Mutant and The AEGIS Alliance.
