@@ -16,6 +16,8 @@ The value is stored with `update_post_meta()` on that product, or on each variat
 
 Directory indexes are blocked with `ABSPATH` checks. Unknown or non-string meta is not passed to string functions, so PHP 8.4 and newer do not throw on bad data left by another tool.
 
+CVE-2026-109618 and CVE-2026-109619 are flaws in the PHP runtime, published October 21, 2026. They are fixed in PHP 8.2.35, 8.3.36, 8.4.27, and 8.5.12. PHP 8.4.26 is affected. This plugin is compatible with PHP 8.0 through 8.5, and it warns in wp-admin when the running PHP is older than the fix for that branch. Updating the plugin does not close those flaws. Update PHP on the server.
+
 The `Update URI` header points at this GitHub repository so a wordpress.org plugin cannot take over updates for this slug.
 
 ## Reporting

@@ -6,7 +6,7 @@ Requires at least: 6.2
 Tested up to: 7.1.3
 Requires PHP: 7.4
 Requires Plugins: woocommerce, pinterest-for-woocommerce
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: AEGIS Source-Available License
 License URI: https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions/blob/main/LICENSE
 WC requires at least: 7.1
@@ -57,7 +57,7 @@ Deactivating or deleting this plugin does not remove condition meta. Those value
 = Requirements =
 
 * WordPress 6.2 or newer. Tested up to WordPress 7.1.3.
-* PHP 7.4 or newer, including PHP 8.4 and PHP 8.5. The code does not use PHP 8-only syntax, so PHP 7.4 through 8.3 keep working. Stored values are checked before they are treated as text, which avoids PHP 8 type errors if another tool wrote unexpected meta.
+* PHP 7.4 or newer, and compatible with PHP 8.0, 8.1, 8.2, 8.3, 8.4, and 8.5. The code does not use PHP 8-only syntax. Stored values are checked before they are treated as text, which avoids PHP 8 type errors if another tool wrote unexpected meta. The October 21, 2026 PHP flaws (CVE-2026-109618 and CVE-2026-109619) are in PHP itself. Run PHP 8.2.35, 8.3.36, 8.4.27, or 8.5.12 or newer. PHP 8.4.26 and older 8.4 releases are not safe. Updating this plugin does not patch PHP.
 * WooCommerce 7.1 or newer. Tested up to WooCommerce 11.2 (11.2.1 is the current patch of that line).
 * Pinterest for WooCommerce. Tested against 1.5.4, the current WordPress.org release. That release requires WordPress 7.0, WooCommerce 11.1, and PHP 7.4, and it is tested up to WooCommerce 11.2. This add-on follows the meta key and the condition values shipped in 1.5.4: `new`, `used`, and `refurbished`.
 
@@ -132,6 +132,11 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 
 == Changelog ==
 
+= 1.3.4 =
+
+* Confirmed compatibility with PHP 8.0 through 8.5.
+* wp-admin now warns when PHP is older than 8.2.35, 8.3.36, 8.4.27, or 8.5.12, the releases that fix CVE-2026-109618 and CVE-2026-109619. Those flaws are in PHP, not in this plugin.
+
 = 1.3.3 =
 
 * Added the AEGIS Source-Available License as LICENSE. TERMS.md is the same license.
@@ -164,6 +169,9 @@ Donations support The AEGIS Alliance's project funding. A secondary purpose is b
 * Earlier release, published as WooCommerce Pinterest Condition Bulk Updater by The AEGIS Alliance.
 
 == Upgrade Notice ==
+
+= 1.3.4 =
+Compatible with PHP 8.0 through 8.5. Warns in wp-admin if PHP is still missing the October 21, 2026 security release. Update the server's PHP. This plugin cannot patch PHP.
 
 = 1.3.3 =
 Adds the AEGIS Source-Available License file. Donation addresses and condition saving are unchanged.

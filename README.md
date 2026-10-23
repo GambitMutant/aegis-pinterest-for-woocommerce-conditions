@@ -17,7 +17,7 @@ Add-on for [Pinterest for WooCommerce](https://wordpress.org/plugins/pinterest-f
 
 Author: [Gambit Mutant](https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions)
 
-Version 1.3.3 · [AEGIS Source-Available License](LICENSE). Earlier releases stay under GPL-2.0-or-later.
+Version 1.3.4 · [AEGIS Source-Available License](LICENSE). Earlier releases stay under GPL-2.0-or-later.
 
 ## Donations
 
@@ -43,7 +43,7 @@ Donations support **The AEGIS Alliance's project funding**. A secondary purpose 
 | Software | This plugin | Notes |
 | --- | --- | --- |
 | WordPress | 6.2 or newer, tested up to **7.1.3** | Pinterest for WooCommerce 1.5.4 itself requires WordPress 7.0. |
-| PHP | **7.4 or newer**, including **8.4** and **8.5** | No PHP 8-only syntax. Older supported PHP versions keep working. PHP 8 string checks guard stored meta. |
+| PHP | **7.4 or newer**, compatible with **8.0 through 8.5** | No PHP 8-only syntax. PHP 8 string checks guard stored meta. The October 21, 2026 flaws (CVE-2026-109618, CVE-2026-109619) are in PHP itself. Safe releases are 8.2.35, 8.3.36, 8.4.27, and 8.5.12 or newer. PHP 8.4.26 is not safe. This plugin cannot patch PHP. |
 | WooCommerce | 7.1 or newer, tested up to **11.2** | Current patch of that line is 11.2.1. Pinterest for WooCommerce 1.5.4 requires WooCommerce 11.1. |
 | Pinterest for WooCommerce | Tested with **1.5.4** | Any release that stores `_wc_pinterest_condition` works the same way. |
 
@@ -122,6 +122,11 @@ No phone-home, no tracking pixels, and no catalog data leaves the site because o
 See [SECURITY.md](SECURITY.md). Report a vulnerability to [gambit@theaegisalliance.com](mailto:gambit@theaegisalliance.com).
 
 ## Changelog
+
+### 1.3.4
+
+- Confirmed compatibility with PHP 8.0 through 8.5.
+- wp-admin warns when PHP is older than 8.2.35, 8.3.36, 8.4.27, or 8.5.12. Those releases fix CVE-2026-109618 and CVE-2026-109619. The flaws are in PHP, not in this plugin.
 
 ### 1.3.3
 

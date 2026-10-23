@@ -3,7 +3,7 @@
  * Plugin Name:       AEGIS Pinterest for WooCommerce Conditions
  * Plugin URI:        https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
  * Description:       Sets the Pinterest condition (New, Used, or Refurbished) for a product, or for every variation at once. Add-on for Pinterest for WooCommerce. Donations support The AEGIS Alliance's project funding, with a secondary purpose of business operations funding. Crypto accepted at Coinbase: USDC 0x39C7e115C4184f2E646D44E3681A87a22a93341B, BTC 3PCJwFfVytUCW2mfgUgKbjWmqsYvTzgCH1, ETH 0xcD8B620962e9ff4a098c4134f1C82fDf96236F87, DOGE DAo22guf8pmNcF1V7FvuqrXTgy2khuPysB, USDT 0x4aF2eE05A313c8a8dd53EdA87DDA69F3E375c3B5.
- * Version:           1.3.3
+ * Version:           1.3.4
  * Author:            Gambit Mutant
  * Author URI:        https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
  * License:           AEGIS Source-Available License
@@ -26,8 +26,70 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'AEGIS_PINTEREST_WC_CONDITIONS_VERSION', '1.3.3' );
+define( 'AEGIS_PINTEREST_WC_CONDITIONS_VERSION', '1.3.4' );
 define( 'AEGIS_PINTEREST_WC_CONDITIONS_FILE', __FILE__ );
+
+/**
+ * Warn when this site's PHP is missing the October 21, 2026 runtime fixes.
+ *
+ * CVE-2026-109618 and CVE-2026-109619 are in PHP itself. This plugin cannot patch them.
+ */
+add_action( 'admin_notices', 'aegis_pinterest_wc_conditions_php_runtime_notice' );
+
+/**
+ * Admin notice for an unpatched PHP runtime.
+ */
+function aegis_pinterest_wc_conditions_php_runtime_notice() {
+	if ( ! current_user_can( 'update_core' ) && ! current_user_can( 'manage_woocommerce' ) ) {
+		return;
+	}
+
+	$message = aegis_pinterest_wc_conditions_php_runtime_message();
+	if ( ! is_string( $message ) || '' === $message ) {
+		return;
+	}
+
+	aegis_pinterest_wc_conditions_print_notice( $message, 'error' );
+}
+
+/**
+ * Message when PHP is older than the patched release for its branch, or has no packaged fix.
+ *
+ * @return string
+ */
+function aegis_pinterest_wc_conditions_php_runtime_message() {
+	$version = PHP_VERSION;
+	$plugin  = 'AEGIS Pinterest for WooCommerce Conditions';
+	$floors  = array(
+		array( '8.2.0', '8.3.0', '8.2.35' ),
+		array( '8.3.0', '8.4.0', '8.3.36' ),
+		array( '8.4.0', '8.5.0', '8.4.27' ),
+		array( '8.5.0', '8.6.0', '8.5.12' ),
+	);
+
+	foreach ( $floors as $floor ) {
+		if ( version_compare( $version, $floor[0], '>=' ) && version_compare( $version, $floor[1], '<' ) && version_compare( $version, $floor[2], '<' ) ) {
+			return sprintf(
+				/* translators: 1: plugin name, 2: running PHP version, 3: patched PHP version */
+				__( '%1$s is compatible with PHP 8.0 and later, but this site is running PHP %2$s. That release is missing the October 21, 2026 fixes for CVE-2026-109618 and CVE-2026-109619. Update PHP to %3$s or newer. Updating this plugin does not patch PHP.', 'aegis-pinterest-wc-conditions' ),
+				$plugin,
+				$version,
+				$floor[2]
+			);
+		}
+	}
+
+	if ( version_compare( $version, '8.2.0', '<' ) ) {
+		return sprintf(
+			/* translators: 1: plugin name, 2: running PHP version */
+			__( '%1$s runs on PHP %2$s, but PHP 8.1 and older have no packaged fix for CVE-2026-109618 and CVE-2026-109619. Move this site to PHP 8.3.36, 8.4.27, or 8.5.12 or newer. Updating this plugin does not patch PHP.', 'aegis-pinterest-wc-conditions' ),
+			$plugin,
+			$version
+		);
+	}
+
+	return '';
+}
 
 /**
  * Tell WooCommerce this add-on does not break HPOS, Cart and Checkout Blocks,
