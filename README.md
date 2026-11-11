@@ -5,8 +5,7 @@
 **The AEGIS Alliance** is the original author, creator, and developer of this repository.
 
 - Original repository: https://github.com/GambitMutant/aegis-pinterest-for-woocommerce-conditions
-- Forks, copies, derivative works, and any other reuse must credit **The AEGIS Alliance**, link to that original repository in the README and the repository description, and keep the donation and fee information in this repository intact and unmodified.
-- Where a fee is collected, including the disclosed cryptocurrency fee, the destination of that fee must not be changed, and the keys or addresses that send it must not be modified or decrypted.
+- Forks, copies, derivative works, and any other reuse must credit **The AEGIS Alliance**, link to that original repository in the README and the repository description, and keep the donation information in this repository intact and unmodified.
 - Use is subject to the [AEGIS Source-Available License](LICENSE) (also in [TERMS.md](TERMS.md)). This project is **source-available**, not open source under the Open Source Initiative definition. Unauthorized use that violates the license is not allowed.
 
 Add-on for [Pinterest for WooCommerce](https://wordpress.org/plugins/pinterest-for-woocommerce/) that sets a product's Pinterest condition from the classic product editor.
